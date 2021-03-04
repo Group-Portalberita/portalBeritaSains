@@ -60,11 +60,10 @@ class UserController {
 
     static getImageApod(req, res, next) {
         const apikey = process.env.API_KEY_APOD
-        let date = '2020-01-01'
 
         axios({
             method: 'get',
-            url: `https://api.nasa.gov/planetary/apod?api_key=${apikey}&date=${date}&count=4`
+            url: `https://api.nasa.gov/planetary/apod?api_key=${apikey}&count=4`
         })
             .then(response => {
                 res.status(200).json(response.data)
