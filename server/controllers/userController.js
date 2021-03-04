@@ -63,7 +63,7 @@ class UserController {
         let date = ''
         axios({
             method: 'get',
-            url: `https://api.nasa.gov/planetary/apod?api_key=${apikey}&date=${date}`
+            url: `https://api.nasa.gov/planetary/apod?api_key=${apikey}&date=${date}&count=4`
         })
             .then(response => {
                 res.status(200).json(response.data)
@@ -78,7 +78,7 @@ class UserController {
         let city = `Jakarta`
         axios({
             method: 'get',
-            url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+            url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`
         })
             .then(response => {
                 res.status(200).json(response.data)
