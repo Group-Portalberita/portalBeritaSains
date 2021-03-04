@@ -8,7 +8,7 @@ const authenticate = (req, res, next) => {
             where: { id, email }
         })
             .then(user => {
-                console.log(req.loggedUser);
+                // console.log(req.loggedUser);
                 req.loggedUser = { id: user.id, email: user.email }
                 next()
             })
