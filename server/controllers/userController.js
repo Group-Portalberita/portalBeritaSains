@@ -2,6 +2,7 @@ const { User } = require('../models');
 const { comparePassword } = require('../helpers/password-helper');
 const { generateToken } = require('../helpers/jwt-helper');
 const axios = require('axios');
+const { get } = require('../routes');
 class UserController {
     static register(req, res, next) {
         const { name, email, password } = req.body
@@ -54,6 +55,38 @@ class UserController {
             })
             .catch(err => {
                 console.log(err)
+            })
+    }
+
+    static getImageApod(req, res, next){
+        let apikey = `mqnWZWEnQc0tQowZeiz7yTKz6oWeHbpWDC7vzYpl`
+        let date = ''
+        axios({
+            method: 'get',
+            url: `https://api.nasa.gov/planetary/apod?api_key=${apikey}&date=${date}`
+        })
+            .then(response =>{
+                res.status(200).json(response.data)
+            })
+            .catch(err =>{
+                console.log(err);
+            })
+    }
+
+    static getWeather(req, res, next){
+        let apikey = `46a74315690ae492e0a4969a4470ac8c`
+        let city =`Jakarta`
+        axios({
+            method:`get`,
+            url:`api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+            // url:`api.openweathermap.org/data/2.5/weather?q=London,uk&appid=46a74315690ae492e0a4969a4470ac8c`
+        })
+            .then(response =>{
+                console.log(err);
+                res.status(200).json(response.data)
+            })
+            .catch(err =>{
+                res.send(err)
             })
     }
 
