@@ -64,40 +64,32 @@
     <!-- End of Page Register -->
 
     <section id="homePage">
-        <nav class="navbar  fixed-top">
+        <nav class="navbar fixed-top p-3" style="transition: background-color 1s">
             <div class="container">
                 <a class="navbar-brand p-0" href="#">
-                    <h4 class="text-light text-center"><i class="fa fa-rocket mx-3"
-                            style="vertical-align:middle"></i>Go-Science</h4>
+                    <h4 class="text-light text-center m-0"><i class="fa fa-rocket mx-3" style="vertical-align:middle"></i>Go-Science</h4>
                 </a>
-                <a href="#" class="btn btn-outline-danger" style="position:absolute; right:20px;" onclick="logout()">log
-                    out</a>
+                <a href="#" style="position:absolute; right:40px;" id="btn-logout" onclick="logout()"><i class="fa fa-power-off" style="font-size:20px; color:#e74c3c"></i></a>
             </div>
         </nav>
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    
+            <div class="carousel-inner" id="apod">
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-block w-100 img-crop"
-                        style="background-image: url('https://apod.nasa.gov/apod/image/2102/rosette_BlockPuckett_960.jpg')"
-                        alt="First slide"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="font">Spiral Galaxy NGC 1350</h1>
-                        <p>This gorgeous island universe lies about 85 million light-years distant</p>
-                        <a class="btn btn-outline-primary btn-science" href="">View More</a>
-                    </div>
+
+              <div class="carousel-item active">
+                <div class="d-block w-100 img-crop" style="background-image: url('img/home.jpg')"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="font">Spiral Galaxy NGC 1350</h1>
+                    <p>This gorgeous island universe lies about 85 million light-years distant</p>
+                    <a class="btn btn-outline-primary btn-science" href="">View More</a>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>WKWKWKKW</h5>
-                        <p>Kocyag</p>
-                    </div>
-                </div>
+              </div>
+
+              
+
+
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -112,101 +104,51 @@
         <img src="./img/landscape.png" style="width:100%; height:260px; position:absolute; top:300px" alt="">
 
         <div style="background-color:#291E47; margin-top : -20px">
-            <div class="container" style="padding-top:100px; padding-bottom: 100px;">
-                <div class="row">
-                    <div class="col-md-7">
-                        <h3 class="text-white mb-0">News Article</h3>
-                        <p class="mb-4" style="color: grey">list of article from all around the world</p>
-                        <div class="card card-science mb-4">
-                            <div class="row">
-                                <div class="col-3 pr-0">
-                                    <img class="news-image"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SVG_logo.svg/1200px-SVG_logo.svg.png"
-                                        alt="">
-                                </div>
-                                <div class="col-9">
-                                    <div class="card-body">
-                                        <h5 class="font">Card title asdjha sjkdhksja hdk jashd kjashdjkhaskj</h5>
-                                        <p class="card-text" style="max-height:75px">Some quick example text to build on
-                                            the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-science-invert col-6">News Article</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card-science mb-4">
-                            <div class="row">
-                                <div class="col-3 pr-0">
-                                    <img class="news-image"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SVG_logo.svg/1200px-SVG_logo.svg.png"
-                                        alt="">
-                                </div>
-                                <div class="col-9">
-                                    <div class="card-body">
-                                        <h5 class="font">Card title asdjha sjkdhksja hdk jashd kjashdjkhaskj</h5>
-                                        <p class="card-text" style="max-height:75px">Some quick example text to build on
-                                            the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-science-invert col-6">News Article</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card-science mb-4">
-                            <div class="row">
-                                <div class="col-3 pr-0">
-                                    <img class="news-image"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SVG_logo.svg/1200px-SVG_logo.svg.png"
-                                        alt="">
-                                </div>
-                                <div class="col-9">
-                                    <div class="card-body">
-                                        <h5 class="font">Card title asdjha sjkdhksja hdk jashd kjashdjkhaskj</h5>
-                                        <p class="card-text" style="max-height:75px">Some quick example text to build on
-                                            the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-science-invert col-6">News Article</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card-science mb-4">
-                            <div class="row">
-                                <div class="col-3 pr-0">
-                                    <img class="news-image"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SVG_logo.svg/1200px-SVG_logo.svg.png"
-                                        alt="">
-                                </div>
-                                <div class="col-9">
-                                    <div class="card-body">
-                                        <h5 class="font">Card title asdjha sjkdhksja hdk jashd kjashdjkhaskj</h5>
-                                        <p class="card-text" style="max-height:75px">Some quick example text to build on
-                                            the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-science-invert col-6">News Article</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-5">
-                        <div class="card card-wheather" style="position:sticky; top:70px">
-                            <div class="card-body text-center text-white">
-                                <h4>Jakarta</h4>
-                                <p class="mb-4">Patchy rain possible</p>
-                                <i class="fa fa-sun mb-5" style="font-size: 92px"></i>
+              <div class="container" style="padding-top:100px; padding-bottom: 100px;">
+                    <div class="row">
+                        <div class="col-md-7" id="berita">
+                            <h3 class="text-white mb-0">News Article</h3>
+                            <p class="mb-4" style="color: grey">list of article from all around the world</p>
+                            
+                            
+                            
+                            <!-- <div class="card card-science mb-4">
                                 <div class="row">
-                                    <div class="col-sm text-center">
-                                        <p class="m-1">Temp</p>
-                                        <h2 class="">40°</h2>
+                                    <div class="col-3 pr-0">
+                                        <img class="news-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SVG_logo.svg/1200px-SVG_logo.svg.png" alt="">
                                     </div>
-                                    <div class="col-sm text-center">
-                                        <p class="m-1">Wind</p>
-                                        <h4 class="">10 km/h</h4>
-
-
+                                    <div class="col-9">
+                                        <div class="card-body">
+                                            <h5 class="font">Card title asdjha sjkdhksja hdk jashd kjashdjkhaskj</h5>
+                                            <p class="card-text" style="max-height:75px">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-science-invert col-6">News Article</a>
+                                          </div>
                                     </div>
-                                    <div class="col-sm">
-                                        <p class="m-1">Humidity</p>
-                                        <h2 style="margin-top:-2px">88%</h2>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card card-wheather" style="position:sticky; top:70px">
+                                <div class="card-body text-center text-white">
+                                    <h4>Jakarta</h4>
+                                    <p class="mb-4" id="weather">Patchy rain possible</p>
+                                    <div id="logocuaca">
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm text-center">
+                                            <p class="m-1">Temp</p>
+                                            <h2 id="temp">40°</h2>
+                                        </div>
+                                        <div class="col-sm text-center">
+                                            <p class="m-1">Wind</p>
+                                            <h4 id="wind">10 km/h</h4>
+                                        </div>
+                                        <div class="col-sm">
+                                            <p class="m-1">Humidity</p>
+                                            <h2 id="humidity" style="margin-top:-2px">88%</h2>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -216,6 +158,7 @@
                 </div>
             </div>
         </div>
+        <div><h6 class="font text-center p-3 m-0">Made With &#10084; by Pejuang Phase 2</h6></div>
     </section>
 
 
