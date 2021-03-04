@@ -19,8 +19,7 @@ $("document").ready(function () {
     $("#link-register").on("click", (e) => {
         e.preventDefault();
         $("#page-login").hide();
-        $("#page-add-todo").hide();
-        $("#page-todos").hide();
+        $("#homePage").hide();
         $("#page-register").show();
     })
 
@@ -97,10 +96,10 @@ function checkLocalStorage() {
     if (localStorage.access_token) {
         $("#page-login").hide();
         $("#page-register").hide();
-        $("#page-contoh").show();
+        $("#homePage").show();
     } else {
         $("#page-login").show();
         $("#page-register").hide();
-        $("#page-contoh").hide();
+        $("#homePage").hide();
     }
 }
