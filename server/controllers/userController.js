@@ -42,7 +42,7 @@ class UserController {
     }
 
     static getBerita(req, res, next) {
-        let apikey = 'a9ab5977972c43bcb109e814e0f95fa9' // harusnya ditaro di .env
+        const apikey = process.env.API_KEY_NEWS
         let q = 'space' // yang di cari
         let date = '2021-03-04' //tanggal mulai dicari
         let sortBy = 'popularity' // di urutkan berdasar
@@ -59,7 +59,7 @@ class UserController {
     }
 
     static getImageApod(req, res, next) {
-        let apikey = `mqnWZWEnQc0tQowZeiz7yTKz6oWeHbpWDC7vzYpl`
+        const apikey = process.env.API_KEY_APOD
         let date = '2020-01-01'
 
         axios({
@@ -75,7 +75,7 @@ class UserController {
     }
 
     static getWeather(req, res, next) {
-        let apikey = `46a74315690ae492e0a4969a4470ac8c`
+        const apikey = process.env.API_KEY_WEATHER
         let city = `Jakarta`
         axios({
             method: 'get',
@@ -91,7 +91,7 @@ class UserController {
 
 
     static loginGoogle(req, res, next) {
-        const googleclientID = '172292797922-rgojj972m4sguqhvro314sp7h43shj8j.apps.googleusercontent.com'
+        const googleclientID = process.env.GOOGLE_CLIENT
         const client = new OAuth2Client(googleclientID)
         async function verify() {
             const ticket = await client.verifyIdToken({
