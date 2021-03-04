@@ -17,30 +17,20 @@
 </head>
 
 <body>
-
-
+      </section>
     <!-- Page Login -->
-    <div class="back" id="page-login">
-        <div class="div-center">
-            <div class="content">
-
-
-                <h3>Login Fancy Todo</h3>
+    <div class="form-signin" id="page-login">
                 <hr />
                 <form>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div><br>
-                    <button type="submit" class="btn btn-primary" id="btn-login">Login</button>
+                    <h1 class="h3 mb-3 fw-normal">Hai there, welcome !</h1><br>
+                        <label for="email">Email address</label><br>
+          <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br>
+          <label for="password">Password</label><br>
+          <input type="password" id="password" class="form-control" placeholder="Password" required><br>
+                    <button class="w-100 btn btn-lg btn-primary"  id="btn-login" type="submit">Login</button><br>
                     <hr />
                 </form>
-
-                <h4>Or Sign In with Google</h4>
+                <p>Or Sign In with Google</p>
                 <hr />
                 <form>
                     <div>
@@ -49,15 +39,19 @@
                             <button id="gSignOut" onclick="signOut()" hidden>Log Out</button>
                         </div>
                     </div>
-
                 </form>
 
-                <p>Not having account yet? <a href="" id="link-register">Register Now</a></p>
+                <p style="color:white;">Not having account yet? <a href="#" id="link-register">Register Now</a></p>
             </div>
             </span>
         </div>
     </div>
     <!-- End of Page Login -->
+
+
+    <!-- Register -->
+
+    <!-- End of Page Register -->
 
     <section id="homePage">
         <nav class="navbar  fixed-top">
