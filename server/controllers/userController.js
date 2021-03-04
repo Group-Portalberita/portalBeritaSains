@@ -2,7 +2,7 @@ const { User } = require('../models');
 const { comparePassword } = require('../helpers/password-helper');
 const { generateToken } = require('../helpers/jwt-helper');
 const axios = require('axios');
-const { get } = require('../routes');
+const { OAuth2Client } = require('google-auth-library');
 class UserController {
     static register(req, res, next) {
         const { name, email, password } = req.body
@@ -58,34 +58,63 @@ class UserController {
             })
     }
 
-    static getImageApod(req, res, next){
+    static getImageApod(req, res, next) {
         let apikey = `mqnWZWEnQc0tQowZeiz7yTKz6oWeHbpWDC7vzYpl`
         let date = ''
         axios({
             method: 'get',
             url: `https://api.nasa.gov/planetary/apod?api_key=${apikey}&date=${date}`
         })
-            .then(response =>{
+            .then(response => {
                 res.status(200).json(response.data)
             })
-            .catch(err =>{
+            .catch(err => {
                 console.log(err);
             })
     }
 
-    static getWeather(req, res, next){
+    static getWeather(req, res, next) {
         let apikey = `46a74315690ae492e0a4969a4470ac8c`
-        let city =`Jakarta`
+        let city = `Jakarta`
         axios({
             method: 'get',
-            url:`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+            url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
         })
-            .then(response =>{
+            .then(response => {
                 res.status(200).json(response.data)
             })
-            .catch(err =>{
+            .catch(err => {
                 console.log(err);
             })
+    }
+
+
+    static loginGoogle(req, res, next) {
+        const googleclientID = '172292797922-rgojj972m4sguqhvro314sp7h43shj8j.apps.googleusercontent.com'
+        const client = new OAuth2Client(googleclientID)
+        async function verify() {
+            const ticket = await client.verifyIdToken({
+                idToken: req.body.token,
+                audience: googleclientID
+            });
+
+            const googleUserParams = ticket.getPayload();
+            User.findOrCreate({
+                where: {
+                    email: googleUserParams.email
+                },
+                defaults: {
+                    email: googleUserParams.email,
+                    password: (new Date()).toDateString()
+                }
+            })
+                .then(user => {
+                    let payload = { id: user[0].id, email: user[0].email }
+                    const access_token = generateToken(payload)
+                    res.status(200).json({ access_token })
+                })
+        }
+        verify().catch(console.error);
     }
 
 }
