@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id"
+        content="172292797922-rgojj972m4sguqhvro314sp7h43shj8j.apps.googleusercontent.com">
+    <title>Home</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <!-- Page Login -->
+    <div class="back" id="page-login">
+        <div class="div-center">
+            <div class="content">
+
+
+                <h3>Login Fancy Todo</h3>
+                <hr />
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div><br>
+                    <button type="submit" class="btn btn-primary" id="btn-login">Login</button>
+                    <hr />
+                </form>
+
+                <h4>Or Sign In with Google</h4>
+                <hr />
+                <form>
+                    <div>
+                        <div class="form-group">
+                            <div id="gSignIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                            <button id="gSignOut" onclick="signOut()" hidden>Log Out</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <p>Not having account yet? <a href="" id="link-register">Register Now</a></p>
+            </div>
+            </span>
+        </div>
+    </div>
+    <!-- End of Page Login -->
+
+    <!-- lanjut gan -->
+    <div id="page-contoh">
+        <h1>Lanjuut</h1>
+    </div>
+    <!-- lanjut gan -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
