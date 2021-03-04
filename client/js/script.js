@@ -107,6 +107,21 @@ function checkLocalStorage() {
     }
 }
 
+function logout() {
+
+    localStorage.removeItem('access_token')
+    checkLocalStorage()
+}
+
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll > 533) {
+        $('nav').css('background-color','#291E47')
+    }else{
+        $('nav').css('background-color','transparent')
+    }
+});
+
 function home() {
     $.ajax({
         url: baseURL + "/apod",
@@ -179,7 +194,6 @@ function home() {
             access_token : localStorage.access_token
         },
         success: function (res) {
-            console.log(res);
             for (let i = 0; i < 10; i++) {
 
                 $("#berita").append(
