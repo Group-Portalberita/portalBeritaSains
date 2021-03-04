@@ -1,0 +1,79 @@
+h1,h2,h3,h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.font{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.btn-science {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border-color: #fff;
+    border-width: 2px;
+    padding : 5px 30px;
+
+}
+.btn-science-invert {
+    color: #6b38f7;
+    font-family: 'Poppins', sans-serif;
+    border-color: #6b38f7;
+    border-width: 2px;
+    padding : 5px 30px;
+
+}
+.card-science{
+    border-radius: 10px;
+}
+.news-image{
+    width : 160px;
+    height :200px;
+    border-radius: 10px 0px 0px 10px;
+    object-fit: cover; 
+    object-position: center;
+}
+
+.card-wheather{
+    background-color: transparent;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+
+}
+
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    top: 150px;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+    background-color: #777;
+  }
+  .img-crop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+    object-fit: cover; 
+    object-position: center;
+    background-attachment: fixed;
+  }
