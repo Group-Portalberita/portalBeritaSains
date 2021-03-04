@@ -54,7 +54,8 @@
             <label for="name">Your Name</label><br>
             <input type="name" id="name-regis" class="form-control" placeholder="Udin" required autofocus><br>
             <label for="email">Email address</label><br>
-            <input type="email" id="email-regis" class="form-control" placeholder="udin@mail.com" required autofocus><br>
+            <input type="email" id="email-regis" class="form-control" placeholder="udin@mail.com" required
+                autofocus><br>
             <label for="password">Password</label><br>
             <input type="password" id="password-regis" class="form-control" placeholder="Password" required><br>
             <button class="w-100 btn btn-lg btn-primary" id="btn-register" type="submit">Sign Up</button><br>
@@ -67,27 +68,29 @@
         <nav class="navbar fixed-top p-3" style="transition: background-color 1s">
             <div class="container">
                 <a class="navbar-brand p-0" href="#">
-                    <h4 class="text-light text-center m-0"><i class="fa fa-rocket mx-3" style="vertical-align:middle"></i>Go-Science</h4>
+                    <h4 class="text-light text-center m-0"><i class="fa fa-rocket mx-3"
+                            style="vertical-align:middle"></i>Go-Science</h4>
                 </a>
-                <a href="#" style="position:absolute; right:40px;" id="btn-logout" onclick="logout()"><i class="fa fa-power-off" style="font-size:20px; color:#e74c3c"></i></a>
+                <a href="#" style="position:absolute; right:40px;" id="btn-logout" onclick="logout()"><i
+                        class="fa fa-power-off" style="font-size:20px; color:#e74c3c"></i></a>
             </div>
         </nav>
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    
+
             <div class="carousel-inner" id="apod">
 
 
-              <div class="carousel-item active">
-                <div class="d-block w-100 img-crop" style="background-image: url('img/home.jpg')"></div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="font">Spiral Galaxy NGC 1350</h1>
-                    <p>This gorgeous island universe lies about 85 million light-years distant</p>
-                    <a class="btn btn-outline-primary btn-science" href="">View More</a>
+                <div class="carousel-item active">
+                    <div class="d-block w-100 img-crop" style="background-image: url('img/home.jpg')"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="font">Spiral Galaxy NGC 1350</h1>
+                        <p>This gorgeous island universe lies about 85 million light-years distant</p>
+                        <a class="btn btn-outline-primary btn-science" href="">View More</a>
+                    </div>
                 </div>
-              </div>
 
-              
+
 
 
             </div>
@@ -104,15 +107,15 @@
         <img src="./img/landscape.png" style="width:100%; height:260px; position:absolute; top:300px" alt="">
 
         <div style="background-color:#291E47; margin-top : -20px">
-              <div class="container" style="padding-top:100px; padding-bottom: 100px;">
-                    <div class="row">
-                        <div class="col-md-7" id="berita">
-                            <h3 class="text-white mb-0">News Article</h3>
-                            <p class="mb-4" style="color: grey">list of article from all around the world</p>
-                            
-                            
-                            
-                            <!-- <div class="card card-science mb-4">
+            <div class="container" style="padding-top:100px; padding-bottom: 100px;">
+                <div class="row">
+                    <div class="col-md-7" id="berita">
+                        <h3 class="text-white mb-0">News Article</h3>
+                        <p class="mb-4" style="color: grey">list of article from all around the world</p>
+
+
+
+                        <!-- <div class="card card-science mb-4">
                                 <div class="row">
                                     <div class="col-3 pr-0">
                                         <img class="news-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SVG_logo.svg/1200px-SVG_logo.svg.png" alt="">
@@ -126,39 +129,41 @@
                                     </div>
                                 </div>
                             </div> -->
-                            
-                        </div>
-                        <div class="col-md-5">
-                            <div class="card card-wheather" style="position:sticky; top:70px">
-                                <div class="card-body text-center text-white">
-                                    <h4>Jakarta</h4>
-                                    <p class="mb-4" id="weather">Patchy rain possible</p>
-                                    <div id="logocuaca">
-                                        
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card card-wheather" style="position:sticky; top:70px">
+                            <div class="card-body text-center text-white">
+                                <h4>Jakarta</h4>
+                                <p class="mb-4" id="weather">Patchy rain possible</p>
+                                <div id="logocuaca">
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm text-center">
+                                        <p class="m-1">Temp</p>
+                                        <h2 id="temp">40°</h2>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <p class="m-1">Temp</p>
-                                            <h2 id="temp">40°</h2>
-                                        </div>
-                                        <div class="col-sm text-center">
-                                            <p class="m-1">Wind</p>
-                                            <h4 id="wind">10 km/h</h4>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="m-1">Humidity</p>
-                                            <h2 id="humidity" style="margin-top:-2px">88%</h2>
-                                        </div>
+                                    <div class="col-sm text-center">
+                                        <p class="m-1">Wind</p>
+                                        <h4 id="wind">10 km/h</h4>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class="m-1">Humidity</p>
+                                        <h2 id="humidity" style="margin-top:-2px">88%</h2>
                                     </div>
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div><h6 class="font text-center p-3 m-0">Made With &#10084; by Pejuang Phase 2</h6></div>
+        </div>
+        <div>
+            <h6 class="font text-center p-3 m-0">Made With &#10084; by Pejuang Phase 2</h6>
+        </div>
     </section>
 
 
