@@ -77,16 +77,14 @@ class UserController {
         let apikey = `46a74315690ae492e0a4969a4470ac8c`
         let city =`Jakarta`
         axios({
-            method:`get`,
-            url:`api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
-            // url:`api.openweathermap.org/data/2.5/weather?q=London,uk&appid=46a74315690ae492e0a4969a4470ac8c`
+            method: 'get',
+            url:`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
         })
             .then(response =>{
-                console.log(err);
                 res.status(200).json(response.data)
             })
             .catch(err =>{
-                res.send(err)
+                console.log(err);
             })
     }
 
