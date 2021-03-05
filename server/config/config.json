@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "88342232",
+    "password": "admin",
     "database": "db_portalBerita",
     "host": "127.0.0.1",
     "dialect": "postgres"

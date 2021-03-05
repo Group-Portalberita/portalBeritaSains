@@ -43,7 +43,7 @@ class UserController {
 
     static getBerita(req, res, next) {
         const apikey = process.env.API_KEY_NEWS
-        let q = 'space' // yang di cari
+        let q = 'astronomy' // yang di cari
         let date = '2021-03-04' //tanggal mulai dicari
         let sortBy = 'popularity' // di urutkan berdasar
         axios({
