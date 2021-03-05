@@ -17,32 +17,47 @@
 </head>
 
 <body>
-    </section>
+    
     <!-- Page Login -->
-    <div class="form-signin" id="page-login">
-        <hr />
-        <form>
-            <h1 class="h3 mb-3 fw-normal">Hai there, welcome !</h1><br>
-            <label for="email">Email address</label><br>
-            <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br>
-            <label for="password">Password</label><br>
-            <input type="password" id="password" class="form-control" placeholder="Password" required><br>
-            <button class="w-100 btn btn-lg btn-primary" id="btn-login" type="submit">Login</button><br>
-            <hr />
-        </form>
-        <p>Or Sign In with Google</p>
-        <hr />
-        <form>
-            <div>
-                <div class="form-group">
-                    <div id="gSignIn" class="g-signin2" data-onsuccess="onSignIn"></div>
-                    <button id="gSignOut" onclick="signOut()" hidden>Log Out</button>
+    <section id="page-login" style="overflow-x: hidden;">
+        <div class="row" style="height : 100vh; ">
+            <div class="col-md-6 bg-login" >
+                <div class="text-center text-light p-5" style="margin-top: 100px">
+                    <i class="fa fa-rocket" style="font-size:130px"></i>
+                    <h2 class="text-light text-center mt-4">Go-Science</h2>
+                    <p>When tugas hacktiv meet nasa api meet four best people and do some great stuff</p>
                 </div>
             </div>
-        </form>
+            <div class="col-md-6">
+                <div class="form-signin" >
+                    <hr />
+                    <form>
+                        <h1 class="h3 mb-3 fw-normal">Hai there, welcome !</h1><br>
+                        <label for="email">Email address</label><br>
+                        <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br>
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" class="form-control" placeholder="Password" required><br>
+                        <button class="w-100 btn btn-lg btn-primary" id="btn-login" type="submit">Login</button><br>
+                        <hr />
+                    </form>
+                    <p>Or Sign In with Google</p>
+                    <hr />
+                    <form>
+                        <div>
+                            <div class="form-group">
+                                <div id="gSignIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                                <button id="gSignOut" onclick="signOut()" hidden>Log Out</button>
+                            </div>
+                        </div>
+                    </form>
+            
+                    <p style="color:black;">Not having account yet? <a href="#" id="link-register">Register Now</a></p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
 
-        <p style="color:black;">Not having account yet? <a href="#" id="link-register">Register Now</a></p>
-    </div>
     <!-- End of Page Login -->
 
 
