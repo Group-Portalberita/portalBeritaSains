@@ -16,6 +16,13 @@ $("document").ready(function () {
         register();
     })
 
+    $("#link-login").on("click", (e) => {
+        e.preventDefault();
+        $("#page-login").show();
+        $("#homePage").hide();
+        $("#page-register").hide();
+    })
+
     $("#link-register").on("click", (e) => {
         e.preventDefault();
         $("#page-login").hide();

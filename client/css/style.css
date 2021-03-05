@@ -112,3 +112,6 @@ p{
   border-top-right-radius: 0;
 }
 
+.bg-login{
+  background-image: url("../img/home.jpg")
+}
