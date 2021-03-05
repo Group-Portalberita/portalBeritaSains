@@ -140,7 +140,7 @@ function home() {
                 $("#apod").append(
                     `
                     <div class="carousel-item">
-                        <div class="d-block w-100 img-crop" style="background-image: url('${res[i].url}')"></div>
+                        <div class="d-block w-100 img-crop" style="background-image: url('${res[i].hdurl}')"></div>
                         <div class="carousel-caption d-none d-md-block">
                             <h1 class="font">${res[i].title}</h1>
                             <p>${res[i].explanation.substring(0, 100)}</p>
