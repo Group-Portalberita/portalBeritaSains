@@ -62,23 +62,42 @@
 
 
     <!-- Register -->
-    <div class="form-register" id="page-register">
-        <form>
-            <hr />
-            <h1 class="h3 mb-3 fw-normal">Join Us Now !</h1><br>
-            <label for="name">Your Name</label><br>
-            <input type="name" id="name-regis" class="form-control" placeholder="Udin" required autofocus><br>
-            <label for="email">Email address</label><br>
-            <input type="email" id="email-regis" class="form-control" placeholder="udin@mail.com" required
-                autofocus><br>
-            <label for="password">Password</label><br>
-            <input type="password" id="password-regis" class="form-control" placeholder="Password" required><br>
-            <button class="w-100 btn btn-lg btn-primary" id="btn-register" type="submit">Sign Up</button><br>
-            <hr />
-        </form>
-    </div>
+
+    <section id="page-register" style="overflow-x: hidden;">
+        <div class="row" style="height : 100vh; ">
+            <div class="col-md-6 bg-login" >
+                <div class="text-center text-light p-5" style="margin-top: 100px">
+                    <i class="fa fa-rocket" style="font-size:130px"></i>
+                    <h2 class="text-light text-center mt-4">Go-Science</h2>
+                    <p>When tugas hacktiv meet nasa api meet four best people and do some great stuff</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-register" >
+                    <form>
+                        <hr />
+                        <h1 class="h3 mb-3 fw-normal">Join Us Now !</h1><br>
+                        <label for="name">Your Name</label><br>
+                        <input type="name" id="name-regis" class="form-control" placeholder="Udin" required autofocus><br>
+                        <label for="email">Email address</label><br>
+                        <input type="email" id="email-regis" class="form-control" placeholder="udin@mail.com" required
+                            autofocus><br>
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password-regis" class="form-control" placeholder="Password" required><br>
+                        <button class="w-100 btn btn-lg btn-primary" id="btn-register" type="submit">Sign Up</button><br>
+                        <hr />
+                    </form>
+                    <p style="color:black;">Have an Account ? <a href="#" id="link-login">Login Now</a></p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    
     <!-- End of Page Register -->
 
+    <!-- Page Home -->
     <section id="homePage">
         <nav class="navbar fixed-top p-3" style="transition: background-color 1s">
             <div class="container">
@@ -180,6 +199,7 @@
             <h6 class="font text-center p-3 m-0">Made With &#10084; by Pejuang Phase 2</h6>
         </div>
     </section>
+    <!--End Page Home -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
